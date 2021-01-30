@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head></head>
+	<body>
+		<!-- Modal -->
+	<div th:fragment="modal(id)" class="modal fade" th:id="${id}"
+		tabindex="-1" role="dialog" aria-labelledby="DetailLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="DetailLabel">Login</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+<!-- 					<form th:action="@{/login}" name="form_login" method="POST"> -->
+						<!-- error message -->
+<!-- 						<div th:if="${param.error}"> -->
+<!-- 							<div class="alert alert-danger">Invalid username or -->
+<!-- 								password.</div> -->
+<!-- 						</div> -->
+						<!-- logout message -->
+<!--  						<div th:if="${param.logout}">
+ 							<div class="alert alert-info">You have been logged out.</div>
+						</div> -->
+
+<!-- 						<div class="form-group">
+ 							<label for="username"> Username </label> : <input type="text"
+ 								class="form-control" id="username" name="username"
+ 								placeholder="Enter Email ID" autofocus="autofocus">
+						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<label for="password">Password</label>: <input type="password" -->
+<!-- 								id="password" name="password" class="form-control" -->
+<!-- 								placeholder="Enter Password" /> -->
+<!-- 						</div> -->
+<!-- 						<div class="form-group"> -->
+<!-- 							<div class="row"> -->
+<!-- 								<div class="col-sm-6 col-sm-offset-3"> -->
+<!-- 									<input type="submit" name="login-submit" id="login-submit" -->
+<!-- 										class="form-control btn btn-primary submit-login" -->
+<!-- 										value="Log In" /> -->
+<!-- 								</div> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</form> -->
+<!-- 			        <div class="form-group"> -->
+<!-- 			            <span>New user? <a th:href="@{/registration}">Register here</a></span> -->
+<!-- 			        </div> -->
+				</div>
+				<div class="modal-footer">
+				
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>
