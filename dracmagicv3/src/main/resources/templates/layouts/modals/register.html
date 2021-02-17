@@ -33,7 +33,12 @@
 
 	<div class="form-group">
 		<button type="submit" class="btn btn-success">Register</button>
-		<span>Already registered? <a id="linkLogin_R"
-			th:href="@{/login}">Login here</a></span>
+		<span>Already registered? 
+			<a id="linkLogin_R" th:href="@{/modals/login}" >Login here</a>
+			<!-- th:onclick="window.location.href='@{/modals/login}'"  th:href="@{/modals/login}"-->
+		</span>
 	</div>
 </form>
+
+
+ 

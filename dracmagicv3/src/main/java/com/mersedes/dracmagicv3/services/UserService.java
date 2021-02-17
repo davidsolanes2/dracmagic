@@ -17,4 +17,5 @@ public interface UserService {
 	int bloquear(int idUser);
 	int activar(int idUser);
 	UserDetails loadUserByEmail(String email);
+	User buscarPorEmail(String email);
 }

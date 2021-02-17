@@ -19,7 +19,7 @@ import com.mersedes.dracmagicv3.repository.UserRepository;
 public class UserRepositoryTests {
 	
 	@Autowired
-	private UserRepository repo;
+	private UserRepository userRepo;
 	
 	@Autowired
 	private TestEntityManager entityManager;
@@ -33,10 +33,18 @@ public class UserRepositoryTests {
 		 * 
 		 */
 		
-		User savedUser = repo.save(user);
+		User savedUser = userRepo.save(user);
 		
 		User existUser = entityManager.find(User.class, savedUser.getId());
 		
 		assertThat(existUser.getEmail()).isEqualTo(user.getEmail());
 	}
+	
+	@Test
+	public void testFindUserByEmail() {
+		String email = "davidsolanes2@gmail.com";
+		User user = userRepo.findByEmail(email);
+		assertThat(user).isNotNull();
+	}
+	
 }

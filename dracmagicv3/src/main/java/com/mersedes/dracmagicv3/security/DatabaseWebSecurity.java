@@ -44,15 +44,22 @@ public class DatabaseWebSecurity extends WebSecurityConfigurerAdapter {
 				).permitAll()
 			//public views
 			.antMatchers(
-					"/layouts/**"
+					"/",
+					"/modals/login",
+					"/modals/register",
+					"/layouts/principal"
 				).permitAll()
 			.antMatchers("/user/**"
-					).hasAnyAuthority("USUARIO");
+					).hasAnyAuthority("USUARIO")
 
 		// public views that require authentication
 			//.anyRequest().authenticated();
 		// login form without authentication
-		//	.and().formLogin().loginPage("/modal_login").permitAll();
+		//	.and().formLogin().loginPage("/modals/login").permitAll();
+		.and()
+		.formLogin()
+		.loginPage("/modals/login").permitAll()
+		.defaultSuccessUrl("/layouts/principal", true);
 		
 		
 	}

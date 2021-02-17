@@ -17,7 +17,6 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
 	List<User> findByFechaRegistroNotNull();
 	
-	
 	@Modifying
 	@Query("UPDATE User u SET u.estatus=0 WHERE u.id = :paramIdUser")
 	int lock(@Param("paramIdUser") int idUser);

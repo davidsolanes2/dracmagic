@@ -53,10 +53,16 @@ public class UserServiceJpa implements UserService {
 	}
 	
 	@Override
+	public User buscarPorEmail(String email) {
+		return userRepo.findByEmail(email);
+	}
+	
+	@Override
 	public List<User> buscarRegistrados() {
 		return userRepo.findByFechaRegistroNotNull();
 	}
 	
+
 	@Transactional
 	@Override
 	public int bloquear(int idUser) {
