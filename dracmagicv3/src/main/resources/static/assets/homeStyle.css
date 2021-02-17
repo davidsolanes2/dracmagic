@@ -1,0 +1,5 @@
+@charset "UTF-8";
+
+.nav-item:hover .nav-link {
+	color: rgb(100, 255, 211);
+}
